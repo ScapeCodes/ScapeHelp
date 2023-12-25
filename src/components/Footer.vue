@@ -3,34 +3,28 @@
         <footer class="footer has-background-black-ter has-text-white">
             <div class="container">
                 <div class="field is-grouped is-grouped-multiline has-text-weight-semibold">
-                    <b-tooltip class="control" multilined :label="downloadsHover + ' downloads across BukkitDev and SpigotMC'">
-                        <div class="tags has-addons">
-                            <a href="https://www.spigotmc.org/resources/essentialsx.9089/" class="tag is-dark">Downloads</a>
-                            <a href="https://www.spigotmc.org/resources/essentialsx.9089/" class="tag is-spigot">{{ downloads }} downloads</a>
-                        </div>
-                    </b-tooltip>
-                    <b-tooltip class="control" multilined label="View all changelogs">
-                        <div class="tags has-addons">
-                            <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-dark">Latest release</a>
-                            <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-primary">{{ latestRelease }}</a>
-                        </div>
-                    </b-tooltip>
                     <b-tooltip class="control" multilined label="Visit the build server">
                         <div class="tags has-addons">
-                            <a href="https://ci.ender.zone/job/EssentialsX" class="tag is-dark">Jenkins</a>
-                            <a href="https://ci.ender.zone/job/EssentialsX" class="tag is-success">b{{ buildNo }}</a>
+                            <a href="https://jenkins.craftationgaming.com/" class="tag is-dark">Jenkins</a>
+                            <a href="https://jenkins.craftationgaming.com/" class="tag is-success">{{ projects }} projects</a>
+                        </div>
+                    </b-tooltip>
+                    <b-tooltip class="control" multilined :label="downloadsHover + ' downloads across BukkitDev and SpigotMC'">
+                        <div class="tags has-addons">
+                            <a href="https://www.spigotmc.org/members/rockinchaos.3051/#resources" class="tag is-dark">Downloads</a>
+                            <a href="https://www.spigotmc.org/members/rockinchaos.3051/#resources" class="tag is-spigot">{{ downloads }} downloads</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip class="control" multilined :label="membersHover + ' people chatting on Discord'">
                         <div class="tags has-addons">
-                            <a href="https://discord.gg/h8CnPSw" class="tag is-dark">Discord</a>
-                            <a href="https://discord.gg/h8CnPSw" class="tag is-discord">{{ members }} online</a>
+                            <a href="https://discord.gg/D5FnJ7C" class="tag is-dark">Discord</a>
+                            <a href="https://discord.gg/D5FnJ7C" class="tag is-discord">{{ members }} online</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip class="control" multilined label="Visit us on GitHub">
                         <div class="tags has-addons">
-                            <a href="https://github.com/EssentialsX/Essentials/" class="tag is-dark">GitHub</a>
-                            <a href="https://github.com/EssentialsX/Essentials/" class="tag is-black">{{ stars }} stars</a>
+                            <a href="https://github.com/RockinChaos/" class="tag is-dark">GitHub</a>
+                            <a href="https://github.com/RockinChaos/" class="tag is-black">{{ stars }} stars</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip v-if="commitHash" class="control" multilined label="View the website source code">
@@ -46,8 +40,7 @@
             </div>
             <br />
             <div class="container content">
-                <p>Website copyright &copy; 2019-2022 EssentialsX Team, 2015-2022 EssentialsX wiki contributors except where otherwise noted.</p>
-                <span class="hide-until-code"><a class="button is-info" href="https://tcrf.net/Dreamcast#Hidden_Alternate_Menu">???</a></span>
+                <p>&copy; {{ copyYear }} CraftationGaming</p>
             </div>
         </footer>
     </div>
@@ -65,13 +58,16 @@ export default {
             return this.$siteConfig.commitHash;
         },
         commitLink() {
-            return "https://github.com/EssentialsX/Website/commit/" + this.commitHash;
+            return "https://github.com/RockinChaos/Craftation-Labs/commit/" + this.commitHash;
+        },
+        projects() {
+            return this.external.projects;
         },
         downloads() {
-            return this.external.downloads ? (this.external.downloads / 1000000).toFixed(2) + "m" : "1.5m";
+            return this.external.downloads ? (this.external.downloads / 1000).toFixed(0) + "k" : "200k";
         },
         downloadsHover() {
-            return this.external.downloads ? this.external.downloads.toLocaleString("en") : "Over 1.5 million";
+            return this.external.downloads ? this.external.downloads.toLocaleString("en") : "Over 200,000";
         },
         stars() {
             return this.external.github.stars || "400+";
@@ -80,10 +76,13 @@ export default {
             return this.external.builds.dev.build || "???";
         },
         members() {
-            return this.external.discord.members ? (this.external.discord.members / 1000).toFixed(1) + "k" : "1k";
+            return this.external.discord.members ? this.external.discord.members : "500";
+        },
+        copyYear() {
+            return "2013 - " + this.external.static.year;
         },
         membersHover() {
-            return this.external.discord.members || "Over 1000";
+            return this.external.discord.members || "Over 500";
         },
         latestRelease() {
             return this.external.builds.stable.version;

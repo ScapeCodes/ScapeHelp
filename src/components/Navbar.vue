@@ -2,7 +2,7 @@
     <nav class="navbar is-dark is-spaced" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <SaberLink class="navbar-item is-marginless has-text-large" to="/">
+                <SaberLink class="navbar-logo is-marginless has-text-large" style="width:400px" to="/">
                     <!-- <b>{{ $siteConfig.title }}</b> -->
                     <img src="@/images/logo-navbar.png">
                 </SaberLink>
@@ -15,12 +15,10 @@
             </div>
 
             <div id="navbar-main" :class="mainClass">
-                <div class="navbar-start">
-                    <!-- <SaberLink to="/wiki/Downloading-EssentialsX.html" class="navbar-item" v-if="!hero">Wiki</SaberLink> -->
-                </div>
-
                 <div class="navbar-end has-text-centered-touch">
                     <SaberLink to="/community.html" class="navbar-item">Community</SaberLink>
+                    <a class="navbar-item" href="https://repo.craftationgaming.com/" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a class="navbar-item" href="https://paste.craftationgaming.com/" target="_blank" rel="noopener noreferrer">Paste</a>
                     <SaberLink to="/wiki/Home.html" class="navbar-item">Wiki</SaberLink>
                     <SaberLink to="/downloads.html" class="navbar-item">
                         <button :class="buttonClass('is-white')">Downloads</button>

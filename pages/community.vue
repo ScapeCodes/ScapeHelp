@@ -1,50 +1,44 @@
 <template>
     <div>
-        <div class="hero is-primary">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">Join the EssentialsX community</h1>
-                    <h2 class="subtitle">Need support with EssentialsX, or just want to chat about servers and plugins? We've got you covered.</h2>
-                </div>
-            </div>
-        </div>
         <div class="section">
             <div class="container">
+                <b-notification type="is-primary" :closable="false">
+                    <p>
+                        Need support with resources by <a href="https://github.com/RockinChaos">@RockinChaos</a>, or just want to chat about servers and plugins?
+                    </p>
+                </b-notification>
                 <div class="columns">
                     <div class="column is-two-thirds">
                         <div class="content">
-                            <h2>Join the MOSS community on Discord</h2>
+                            <h2>Join the CraftationGaming community on Discord</h2>
                             <p>
-                                MOSS is one of the leading Discord communities for open source Minecraft projects.
+                                You can get support for any of @RockinChaos resources including ItemJoin,
+                                plus chat to fellow server owners and plugin developers. We're always happy to welcome new members and provide support where we can.
+                                <br/>
+                                We can quickly respond to your requests on our <a href="https://discord.gg/D5FnJ7C" target="_blank">Discord</a>.
                             </p>
+                            <h2>Contribute on GitHub</h2>
                             <p>
-                                You can get support for several plugins including EssentialsX, plus chat to fellow server owners and plugin developers from across the globe! We're always happy to welcome new members.
-                                <a href="https://discord.gg/h8CnPSw">Click here to join.</a>
+                                Want to report a bug, request a feature or contribute to any of @RockinChaos resources?
+                                <br/>
+                                You can join in the discussion on <a href="https://github.com/RockinChaos">GitHub.</a>
                             </p>
-                            <h2>Discuss EssentialsX on GitHub</h2>
+                            <h2>Support the Development</h2>
                             <p>
-                                Want to report a bug, request a feature or contribute to EssentialsX? You can join in the discussion on
-                                <a href="https://github.com/EssentialsX/Essentials">GitHub.</a>
-                            </p>
-                            <h2>Visit us on Patreon</h2>
-                            <p>
-                                Feeling generous or just want to say hi? You can see news updates, chat to other patrons and leave comments for us over on our
-                                <a href="https://patreon.com/EssentialsX">Patreon page.</a> You can also pledge to EssentialsX to help support the project.
-                            </p>
-                            <h2>EssentialsX on IRC</h2>
-                            <p>
-                                For all the old-fashioned folk out there, you can join <strong>#essentialsx</strong> over on <strong>irc.esper.net</strong>.
-                                Note that the IRC channel is less active, so if you're looking for quick support, we strongly recommend joining MOSS on Discord instead.
+                                Enjoy our resources and are feeling generous?
+                                <br/>
+                                You can support the development of these Resources by supporting us on
+                                <a href="https://www.paypal.me/RockinChaos" target="_blank">PayPal</a> or
+                                <a href="https://www.patreon.com/rockinchaos" target="_blank">Patreon</a>.
                             </p>
                         </div>
                     </div>
                     <div class="column">
                         <Discord />
-                        <Patreon />
                         <Github />
+                        <Patreon />
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

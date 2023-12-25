@@ -11,8 +11,15 @@ try {
 
 module.exports = {
     siteConfig: {
-        title: "EssentialsX",
-        description: "The essential plugin for Spigot servers",
+        title: "Craftation Labs",
+        description: "Craftation Labs for development builds and official releases",
+        link: [
+          {
+            rel: 'icon',
+            type: 'image/x-icon',
+            href:'https://craftationgaming.com/api/images/integration_favicon.ico'
+          }
+        ],
         lang: "en",
         commitHash: commit
     },
@@ -20,37 +27,6 @@ module.exports = {
         wikiSidebar: {
             "Getting Started": [
                 { label: "Introduction", link: "/wiki/Home.html" },
-                { label: "Installing EssentialsX", link: "/wiki/Installing-EssentialsX.html" },
-                { label: "Module Breakdown", link: "/wiki/Module-Breakdown.html" },
-                { label: "Improvements over Essentials", link: "/wiki/Improvements.html" },
-                { label: "Translations and Custom Messages", link: "/wiki/Locale.html" },
-                { label: "Frequently Asked Questions", link: "/wiki/Common-Issues.html" }
-            ],
-            "Configuring EssentialsX": [
-                { label: "Command Cooldowns", link: "/wiki/Command-Cooldowns.html" },
-                { label: "Color Permissions", link: "/wiki/Color-Permissions.html" },
-                { label: "Customising /list", href: "https://wiki.mc-ess.net/wiki/List" },
-                { label: "EssentialsX Discord Setup Guide", link: "/wiki/Discord-Tutorial.html" },
-            ],
-            "Using EssentialsX": [
-                { label: "Signs", href: "https://wiki.mc-ess.net/wiki/Sign_Tutorial" },
-                { label: "Banner Meta", link: "/wiki/BannerMeta.html" },
-            ],
-            Modules: [
-                { label: "AntiBuild", href: "https://wiki.mc-ess.net/wiki/AntiBuild" },
-                { label: "Chat", link: "/wiki/Module-Breakdown.html#essentialsx-chat" },
-                { label: "Discord", link: "/wiki/Module-Breakdown.html#essentialsx-discord" },
-                { label: "Discord Link (NEW)", link: "/wiki/Module-Breakdown.html#essentialsx-discord-link" },
-                { label: "GeoIP", link: "/wiki/GeoIP.html" },
-                { label: "Protect", href: "https://wiki.mc-ess.net/wiki/Configuration_file#EssentialsProtect" },
-                { label: "Spawn", link: "/wiki/Module-Breakdown.html#essentialsx-spawn" },
-                { label: "XMPP", href: "https://wiki.mc-ess.net/wiki/XMPP" }
-
-            ],
-            Reference: [
-                { label: "Commands", href: "https://essinfo.xeya.me/commands.html" },
-                { label: "Permissions", href: "https://essinfo.xeya.me/permissions.html" },
-                { label: "Changelogs", href: "https://github.com/EssentialsX/Essentials/releases" }
             ]
         }
     },
@@ -65,9 +41,5 @@ module.exports = {
                 }
             }
         ]
-    },
-    plugins: [
-        { resolve: "saber-plugin-netlify-redirect" },
-        { resolve: "./plugins/wiki-redirects" },
-    ]
+    }
 }

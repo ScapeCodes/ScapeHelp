@@ -3,7 +3,7 @@
         <div class="media-content">
             <div class="content has-text-centered">
                 <p>
-                    EssentialsX is part of <strong class="has-text-white">MOSS on Discord</strong>
+                    <strong class="has-text-white">CraftationGaming</strong> on <strong class="has-text-white">Discord</strong>
                 </p>
             </div>
             <nav class="level is-mobile">
@@ -15,14 +15,14 @@
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                        <p class="title has-text-white">4000+</p>
+                        <p class="title has-text-white">1000+</p>
                         <p class="heading">Members</p>
                     </div>
                 </div>
             </nav>
             <div class="content">
                 <p class="has-text-right is-size-7">
-                    <a class="has-text-white" href="https://discord.gg/h8CnPSw">Join on Discord...</a>
+                    <a class="has-text-white" href="https://discord.gg/D5FnJ7C">Join on Discord...</a>
                 </p>
             </div>
         </div>

@@ -3,7 +3,7 @@
         <div class="media-content">
             <div class="content has-text-centered">
                 <p>
-                    EssentialsX is <strong class="has-text-white">open source</strong>
+                    All resources by @RockinChaos are <strong class="has-text-white">open source</strong>
                 </p>
             </div>
             <nav class="level is-mobile">
@@ -22,7 +22,7 @@
             </nav>
             <div class="content">
                 <p class="has-text-right is-size-7">
-                    <a class="has-text-white" href="https://github.com/EssentialsX/Essentials">Visit on GitHub...</a>
+                    <a class="has-text-white" href="https://github.com/RockinChaos">Visit on GitHub...</a>
                 </p>
             </div>
         </div>

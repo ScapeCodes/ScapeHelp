@@ -4,8 +4,8 @@ import Buefy from "buefy";
 import "./style/main.scss";
 
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { faSync, faExternalLinkSquareAlt, faDownload, faChevronDown, faChevronUp, faUsers, faCheckCircle, faTools, faSun, faMoon, faArrowUp, faArrowDown, faAngleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faDiscord, faPatreon } from "@fortawesome/free-brands-svg-icons";
+import { faSync, faExternalLinkSquareAlt, faDownload, faChevronDown, faChevronUp, faUsers, faFileAlt, faFileArchive, faClipboard, faCheckCircle, faTools, faSun, faMoon, faArrowUp, faArrowDown, faAngleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faDiscord, faJava, faPatreon } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import KonamiCode from "vue-konami-code";
@@ -19,7 +19,7 @@ hljs.registerLanguage('yaml', yaml);
 
 import ExternalData from "./mixins/external-data";
 
-library.add(faSync, faUsers, faExternalLinkSquareAlt, faChevronDown, faChevronUp, faGithub, faDiscord, faDownload, faPatreon, faCheckCircle, faTools, faSun, faMoon, faArrowUp, faArrowDown, faAngleRight, faSearch);
+library.add(faSync, faUsers, faExternalLinkSquareAlt, faChevronDown, faChevronUp, faGithub, faFileAlt, faFileArchive, faClipboard, faDiscord, faJava, faDownload, faPatreon, faCheckCircle, faTools, faSun, faMoon, faArrowUp, faArrowDown, faAngleRight, faSearch);
 Vue.component('fa-icon', FontAwesomeIcon);
 
 Vue.use(Buefy, {
@@ -49,8 +49,15 @@ export default ({ setHead }) => {
     meta: [
         {
             name: "description",
-            content: "The essential plugin for Spigot servers."
+            content: "Craftation Labs for development builds and official releases"
         }
-    ]
+    ],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href:'https://craftationgaming.com/api/images/integration_favicon.ico'
+      }
+    ],
   });
 }

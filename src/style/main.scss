@@ -5,8 +5,17 @@
 $gap: 48px;
 
 // Set your colors
-$primary: rgb(233, 59, 56);
+$primary: rgb(0, 205, 237);
 $primary-invert: findColorInvert($primary);
+
+$button-primary: rgb(31, 120, 17);
+$button-primary-invert: findColorInvert($button-primary);
+
+$button-secondary: rgb(96, 96, 97);
+$button-secondary-invert: findColorInvert($button-secondary);
+
+$nav-button: transparent;
+$nav-button-invert: findColorInvert($nav-button);
 
 $discord: #7289DA;
 $discord-invert: findColorInvert($discord);
@@ -17,7 +26,7 @@ $spigot-invert: findColorInvert($spigot);
 $serverinfo: #1fab52;
 $serverinfo-invert: findColorInvert($serverinfo);
 
-$patreon: #f86754;
+$patreon: rgb(26, 62, 189);
 $patreon-invert: findColorInvert($patreon);
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
@@ -26,6 +35,8 @@ $colors: ("white": ($white, $black),
     "light": ($light, $light-invert),
     "dark": ($dark, $dark-invert),
     "primary": ($primary, $primary-invert),
+    "button-primary": ($button-primary, $button-primary-invert),
+    "button-secondary": ($button-secondary, $button-secondary-invert),
     "info": ($info, $info-invert),
     "success": ($success, $success-invert),
     "warning": ($warning, $warning-invert),

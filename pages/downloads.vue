@@ -1,25 +1,12 @@
 <template>
     <div>
-        <div class="hero is-primary">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">Download EssentialsX</h1>
-                    <h2 class="subtitle">Get bleeding edge builds of EssentialsX and add-ons, including the latest features and bug fixes.</h2>
-                </div>
-            </div>
-        </div>
         <div class="section">
             <div class="container">
-                <b-notification type="is-danger">
-                    <p>
-                        <b>PSA: Do not use Mohist. It includes dangerous and potentially malicious behaviour.</b>
-                        <saber-link to="/do-not-use-mohist.html">Click here for more information.</saber-link>
-                    </p>
-                </b-notification>
                 <b-notification type="is-patreon">
                     <p>
-                        EssentialsX is developed by volunteers in our free time.
-                        If you'd like to support the development of EssentialsX, please consider supporting us on <a href="https://www.patreon.com/essentialsx" target="_blank">Patreon</a>, <a href="https://github.com/sponsors/EssentialsX/" target="_blank">GitHub Sponsors</a> or <a href="https://ko-fi.com/essentialsx" target="_blank">Ko-fi</a>.
+                        If you'd like to support the development of these Resources, please consider supporting us on
+                        <a href="https://www.paypal.me/RockinChaos" target="_blank">PayPal</a> or
+                        <a href="https://www.patreon.com/rockinchaos" target="_blank">Patreon</a>.
                     </p>
                 </b-notification>
                 <ClientOnly>

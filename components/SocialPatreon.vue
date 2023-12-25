@@ -3,41 +3,24 @@
         <div class="media-content">
             <div class="content has-text-centered">
                 <p>
-                    Support EssentialsX on <strong class="has-text-white">Patreon</strong>
+                    Support @RockinChaos on <strong class="has-text-white">Patreon</strong>
                 </p>
             </div>
             <nav class="level is-mobile">
                 <div class="level-item has-text-centered">
                     <div>
-                        <p class="title has-text-white">{{ patrons }}</p>
-                        <p class="heading">Patrons</p>
-                    </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="title has-text-white">${{ sum }}</p>
-                        <p class="heading">Per month</p>
+                        <p class="title has-text-white">$5</p>
+                        <p class="heading">Starting At</p>
                     </div>
                 </div>
             </nav>
             <div class="content">
                 <p class="has-text-right is-size-7">
-                    <a class="has-text-white" href="https://patreon.com/EssentialsX">Support on Patreon...</a>
+                    <a class="has-text-white" href="https://www.paypal.me/RockinChaos">Support on PayPal......</a>
+                    <br/>
+                    <a class="has-text-white" href="https://www.patreon.com/rockinchaos">Support on Patreon...</a>
                 </p>
             </div>
         </div>
     </article>
 </template>
-
-<script>
-export default {
-    computed: {
-        patrons() {
-            return this.external.patreon.patrons || "??";
-        },
-        sum() {
-            return this.external.patreon.sum ? Math.round(this.external.patreon.sum / 100) : "??";
-        }
-    }
-}
-</script>

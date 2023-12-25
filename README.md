@@ -1,8 +1,12 @@
-# EssentialsX Website
+# Craftation Labs Website
 
-The EssentialsX website hosted at https://essentialsx.net.
+Originally forked from [EssentialsX/Website](https://github.com/EssentialsX/Website)
+<br/>
+Credit to EssentialsX and their team.
 
-This website is a static site generated using [Saber](https://saber.land/). The site uses the [Bulma](https://bulma.io) and [Buefy](https://buefy.org) frameworks.
+The Craftation Labs website hosted at https://ci.craftationgaming.com.
+
+This website is a static site generated using [Saber](https://github.com/saberland/saber). The site uses the [Bulma](https://bulma.io) and [Buefy](https://buefy.org) frameworks.
 
 ## Building
 
