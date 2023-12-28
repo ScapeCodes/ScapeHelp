@@ -19,6 +19,6 @@ This website is a static site generated using [Saber](https://github.com/saberla
 
 ### Commands
 
-- To start a development server with live reload: `yarn saber`
-- To build a site for deployment: `yarn saber build`
+- To start a development server with live reload: `yarn dev`
+- To build a site for deployment: `yarn build`
 - To update wiki content: `git submodule update --recursive --remote`
