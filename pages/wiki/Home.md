@@ -1,6 +1,4 @@
-# CraftationGaming wiki!
-
-
+# CraftationGaming Wiki
 
 > **Note:**  
 >

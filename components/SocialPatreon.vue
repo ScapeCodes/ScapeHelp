@@ -16,9 +16,9 @@
             </nav>
             <div class="content">
                 <p class="has-text-right is-size-7">
-                    <a class="has-text-white" href="https://www.paypal.me/RockinChaos">Support on PayPal......</a>
+                    <a class="has-text-white" href="https://www.paypal.me/RockinChaos" target="_blank" rel="noopener noreferrer">Support on PayPal......</a>
                     <br/>
-                    <a class="has-text-white" href="https://www.patreon.com/rockinchaos">Support on Patreon...</a>
+                    <a class="has-text-white" href="https://www.patreon.com/rockinchaos" target="_blank" rel="noopener noreferrer">Support on Patreon...</a>
                 </p>
             </div>
         </div>

@@ -4,7 +4,7 @@
             <div class="container">
                 <b-notification type="is-primary" :closable="false">
                     <p>
-                        Need support with resources by <a href="https://github.com/RockinChaos">@RockinChaos</a>, or just want to chat about servers and plugins?
+                        Need support with resources by <a href="https://github.com/RockinChaos" target="_blank" rel="noopener noreferrer">@RockinChaos</a>, or just want to chat about servers and plugins?
                     </p>
                 </b-notification>
                 <div class="columns">
@@ -15,21 +15,21 @@
                                 You can get support for any of @RockinChaos resources including ItemJoin,
                                 plus chat to fellow server owners and plugin developers. We're always happy to welcome new members and provide support where we can.
                                 <br/>
-                                We can quickly respond to your requests on our <a href="https://discord.gg/D5FnJ7C" target="_blank">Discord</a>.
+                                We can quickly respond to your requests on our <a href="https://discord.gg/D5FnJ7C" target="_blank" rel="noopener noreferrer">Discord</a>.
                             </p>
                             <h2>Contribute on GitHub</h2>
                             <p>
                                 Want to report a bug, request a feature or contribute to any of @RockinChaos resources?
                                 <br/>
-                                You can join in the discussion on <a href="https://github.com/RockinChaos">GitHub.</a>
+                                You can join in the discussion on <a href="https://github.com/RockinChaos" target="_blank" rel="noopener noreferrer">GitHub.</a>
                             </p>
                             <h2>Support the Development</h2>
                             <p>
                                 Enjoy our resources and are feeling generous?
                                 <br/>
                                 You can support the development of these Resources by supporting us on
-                                <a href="https://www.paypal.me/RockinChaos" target="_blank">PayPal</a> or
-                                <a href="https://www.patreon.com/rockinchaos" target="_blank">Patreon</a>.
+                                <a href="https://www.paypal.me/RockinChaos" target="_blank" rel="noopener noreferrer">PayPal</a> or
+                                <a href="https://www.patreon.com/rockinchaos" target="_blank" rel="noopener noreferrer">Patreon</a>.
                             </p>
                         </div>
                     </div>

@@ -22,7 +22,7 @@
             </nav>
             <div class="content">
                 <p class="has-text-right is-size-7">
-                    <a class="has-text-white" href="https://github.com/RockinChaos">Visit on GitHub...</a>
+                    <a class="has-text-white" href="https://github.com/RockinChaos" target="_blank" rel="noopener noreferrer">Visit on GitHub...</a>
                 </p>
             </div>
         </div>

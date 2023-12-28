@@ -5,32 +5,32 @@
                 <div class="field is-grouped is-grouped-multiline has-text-weight-semibold">
                     <b-tooltip class="control" multilined label="Visit the build server">
                         <div class="tags has-addons">
-                            <a href="https://jenkins.craftationgaming.com/" class="tag is-dark">Jenkins</a>
-                            <a href="https://jenkins.craftationgaming.com/" class="tag is-success">{{ projects }} projects</a>
+                            <a href="https://jenkins.craftationgaming.com/" target="_blank" rel="noopener noreferrer" class="tag is-dark">Jenkins</a>
+                            <a href="https://jenkins.craftationgaming.com/" target="_blank" rel="noopener noreferrer" class="tag is-success">{{ projects }} projects</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip class="control" multilined :label="downloadsHover + ' downloads across BukkitDev and SpigotMC'">
                         <div class="tags has-addons">
-                            <a href="https://www.spigotmc.org/members/rockinchaos.3051/#resources" class="tag is-dark">Downloads</a>
-                            <a href="https://www.spigotmc.org/members/rockinchaos.3051/#resources" class="tag is-spigot">{{ downloads }} downloads</a>
+                            <a href="https://www.spigotmc.org/members/rockinchaos.3051/#resources" target="_blank" rel="noopener noreferrer" class="tag is-dark">Downloads</a>
+                            <a href="https://www.spigotmc.org/members/rockinchaos.3051/#resources" target="_blank" rel="noopener noreferrer" class="tag is-spigot">{{ downloads }} downloads</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip class="control" multilined :label="membersHover + ' people chatting on Discord'">
                         <div class="tags has-addons">
-                            <a href="https://discord.gg/D5FnJ7C" class="tag is-dark">Discord</a>
-                            <a href="https://discord.gg/D5FnJ7C" class="tag is-discord">{{ members }} online</a>
+                            <a href="https://discord.gg/D5FnJ7C" target="_blank" rel="noopener noreferrer" class="tag is-dark">Discord</a>
+                            <a href="https://discord.gg/D5FnJ7C" target="_blank" rel="noopener noreferrer" class="tag is-discord">{{ members }} online</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip class="control" multilined label="Visit us on GitHub">
                         <div class="tags has-addons">
-                            <a href="https://github.com/RockinChaos/" class="tag is-dark">GitHub</a>
-                            <a href="https://github.com/RockinChaos/" class="tag is-black">{{ stars }} stars</a>
+                            <a href="https://github.com/RockinChaos/" target="_blank" rel="noopener noreferrer" class="tag is-dark">GitHub</a>
+                            <a href="https://github.com/RockinChaos/" target="_blank" rel="noopener noreferrer" class="tag is-black">{{ stars }} stars</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip v-if="commitHash" class="control" multilined label="View the website source code">
                         <div class="tags has-addons">
-                            <a :href="commitLink" class="tag is-dark">Website</a>
-                            <a :href="commitLink" class="tag is-white-bis">{{ commitHash }}</a>
+                            <a :href="commitLink" target="_blank" rel="noopener noreferrer" class="tag is-dark">Website</a>
+                            <a :href="commitLink" target="_blank" rel="noopener noreferrer" class="tag is-white-bis">{{ commitHash }}</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip class="control" multilined label="Change the website theme">

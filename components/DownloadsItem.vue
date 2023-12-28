@@ -2,8 +2,8 @@
   <div class="content">
     <div class="content">
       <p v-if="version"> The latest <b>{{ branch }}</b> version of {{ name }} is <b>{{ version }}</b>
-        <span v-if="build"> (build {{ build }} <span v-if="commit">, commit <a :href='`https://github.com/RockinChaos/${name}/commit/${commit}`'>{{ commit.substring(0, 7) }}</a>, <a :href="changelogDevUrl">changelog</a>).</span></span>
-        <span v-if="branch == 'stable'"> (<a :href="changelogReleaseUrl">changelog</a>).</span>
+        <span v-if="build"> (build {{ build }} <span v-if="commit">, commit <a :href='`https://github.com/RockinChaos/${name}/commit/${commit}`' target="_blank" rel="noopener noreferrer">{{ commit.substring(0, 7) }}</a>, <a :href="changelogDevUrl" target="_blank" rel="noopener noreferrer">changelog</a>).</span></span>
+        <span v-if="branch == 'stable'"> (<a :href="changelogReleaseUrl" target="_blank" rel="noopener noreferrer">changelog</a>).</span>
       </p>
     </div>
     <div class="box">
@@ -30,7 +30,7 @@
           <div class="buttons column-margin-top">
             <b-button type="is-info" v-if="info" tag="a" :href="info"> More Info </b-button>
             <b-button type="is-button-primary" v-if="downloadUrl" tag="a" :href="downloadUrl"> Download </b-button>
-            <b-button type="is-button-secondary" v-if="premium && branch == 'stable'" tag="a" :href="premiumUrl"> Download </b-button>
+            <b-button type="is-button-secondary" v-if="premium && branch == 'stable'" tag="a" :href="premiumUrl" target="_blank" rel="noopener noreferrer"> Download </b-button>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
             <p>
               {{ description }}
             </p>
-            <p> Officially supports <b>CraftBukkit</b>, <b>Spigot</b> and <a href="https://papermc.io/">
+            <p> Officially supports <b>CraftBukkit</b>, <b>Spigot</b> and <a href="https://papermc.io/" target="_blank" rel="noopener noreferrer">
                 <b>Paper (recommended)</b>
               </a> server software. </p>
             <ul>

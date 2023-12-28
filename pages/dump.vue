@@ -4,7 +4,7 @@
       <div class="container">
       <b-notification type="is-primary" :closable="false">
         <p>
-            Provide this Server Dump URL to CraftationGaming <a class="has-text-white" href="https://discord.gg/D5FnJ7C">support</a> to quickly receive help with your plugin issues.
+            Provide this Server Dump URL to CraftationGaming <a class="has-text-white" href="https://discord.gg/D5FnJ7C" target="_blank" rel="noopener noreferrer">support</a> to quickly receive help with your plugin issues.
         </p>
       </b-notification>
         <ClientOnly>

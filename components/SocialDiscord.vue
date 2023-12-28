@@ -22,7 +22,7 @@
             </nav>
             <div class="content">
                 <p class="has-text-right is-size-7">
-                    <a class="has-text-white" href="https://discord.gg/D5FnJ7C">Join on Discord...</a>
+                    <a class="has-text-white" href="https://discord.gg/D5FnJ7C" target="_blank" rel="noopener noreferrer">Join on Discord...</a>
                 </p>
             </div>
         </div>

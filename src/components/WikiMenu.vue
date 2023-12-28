@@ -21,7 +21,7 @@
                     <ul class="menu-list" :key="title + '_list'">
                         <li v-for="item in contents" :key="item.label">
                             <SaberLink v-if="item.link" :to="item.link" :class="linkClass(item.link)">{{ item.label }}</SaberLink>
-                            <a v-else-if="item.href" :href="item.href" target="_blank">
+                            <a v-else-if="item.href" :href="item.href" target="_blank" rel="noopener noreferrer">
                                 {{ item.label }}
                             </a>
                             <ul v-if="item.children">

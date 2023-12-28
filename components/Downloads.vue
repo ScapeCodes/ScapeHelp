@@ -20,7 +20,7 @@
                 <b-notification type="is-danger" v-if="error" :closable="false">
                     <p>
                         Could not load the latest dev builds. <a href="#" @click="refreshDownloads">Retry</a>, or
-                        click <a href="https://jenkins.craftationgaming.com/">here</a> to view builds on Jenkins.
+                        click <a href="https://jenkins.craftationgaming.com/" target="_blank" rel="noopener noreferrer">here</a> to view builds on Jenkins.
                     </p>
                     <p>
                         If the issue persists, check <saber-link to="/community.html">Discord</saber-link> for updates
