@@ -26,7 +26,7 @@ module.exports = {
     themeConfig: {
         wikiSidebar: {
             "Getting Started": [
-                { label: "Introduction", link: "/wiki/Home.html" },
+                { label: "Introduction", link: "/wiki" },
             ]
         }
     },

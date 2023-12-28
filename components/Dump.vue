@@ -10,7 +10,7 @@
         <p>
           Be sure to replace "plugin-name" with the plugin you are using.
           <br/>
-          Command not working? <saber-link to="/downloads.html">Update</saber-link> to the latest version and try again.
+          Command not working? <saber-link to="/downloads">Update</saber-link> to the latest version and try again.
         </p>
       </div>
     </b-message>

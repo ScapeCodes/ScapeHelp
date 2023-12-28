@@ -23,7 +23,7 @@
                         click <a href="https://jenkins.craftationgaming.com/" target="_blank" rel="noopener noreferrer">here</a> to view builds on Jenkins.
                     </p>
                     <p>
-                        If the issue persists, check <saber-link to="/community.html">Discord</saber-link> for updates
+                        If the issue persists, check <saber-link to="/community">Discord</saber-link> for updates
                         and alternative download links.
                     </p>
                 </b-notification>

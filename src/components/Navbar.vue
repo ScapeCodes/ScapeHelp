@@ -16,11 +16,11 @@
 
             <div id="navbar-main" :class="mainClass">
                 <div class="navbar-end has-text-centered-touch">
-                    <SaberLink to="/community.html" class="navbar-item">Community</SaberLink>
+                    <SaberLink to="/community" class="navbar-item">Community</SaberLink>
                     <a class="navbar-item" href="https://repo.craftationgaming.com/" target="_blank" rel="noopener noreferrer">Repository</a>
                     <a class="navbar-item" href="https://paste.craftationgaming.com/" target="_blank" rel="noopener noreferrer">Paste</a>
-                    <SaberLink to="/wiki/Home.html" class="navbar-item">Wiki</SaberLink>
-                    <SaberLink to="/downloads.html" class="navbar-item">
+                    <SaberLink to="/wiki" class="navbar-item">Wiki</SaberLink>
+                    <SaberLink to="/downloads" class="navbar-item">
                         <button :class="buttonClass('is-white')">Downloads</button>
                     </SaberLink>
                 </div>

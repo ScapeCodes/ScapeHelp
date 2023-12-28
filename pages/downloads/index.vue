@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Downloads from "../components/Downloads.vue";
+import Downloads from "../../components/Downloads.vue";
 
 export const attributes = {
     title: "Downloads"

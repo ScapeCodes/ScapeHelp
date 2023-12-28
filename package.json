@@ -16,7 +16,6 @@
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
     "saber": "^0.6.10",
-    "saber-plugin-meta-redirect": "^0.1.2",
     "vue-konami-code": "^1.0.0"
   },
   "devDependencies": {

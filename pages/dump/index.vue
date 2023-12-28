@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Dump from "../components/Dump";
+import Dump from "../../components/Dump";
 
 export const attributes = {
   title: "Server Dump"

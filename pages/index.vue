@@ -30,7 +30,7 @@
                             <h2>Wiki</h2>
                             <p>Many of our resources have a lot of features which may get confusing. We do our best to document everything in an easy to digest manner with easy browsing on our wiki.</p>
                             <p>If you find something is missing, you don't understand, or just need help you can always reach out to us on our <a class="has-text-white" href="https://discord.gg/D5FnJ7C" target="_blank" rel="noopener noreferrer">Discord</a></p>
-                            <saber-link class="button is-primary is-rounded" to="/wiki/Home.html">Visit the wiki</saber-link>
+                            <saber-link class="button is-primary is-rounded" to="/wiki">Visit the wiki</saber-link>
                         </div>
                     </div>
                    <div class="tile is-parent row">

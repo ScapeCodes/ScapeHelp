@@ -45,9 +45,9 @@
 </template>
 
 <script>
-import Discord from "../components/SocialDiscord";
-import Patreon from "../components/SocialPatreon";
-import Github from "../components/SocialGithub";
+import Discord from "../../components/SocialDiscord";
+import Patreon from "../../components/SocialPatreon";
+import Github from "../../components/SocialGithub";
 
 export const attributes = {
     title: "Community"
