@@ -38,8 +38,8 @@
   ],
   "scripts": {
     "postinstall": "patch-package",
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && saber --port 3050",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && saber serve --port 3050",
     "dev": "set NODE_OPTIONS=--openssl-legacy-provider && saber --port 3050",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && saber build --port 3050"
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && saber build"
   }
 }
