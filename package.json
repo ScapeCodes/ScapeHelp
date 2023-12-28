@@ -17,7 +17,6 @@
     "postinstall-postinstall": "^2.1.0",
     "saber": "^0.6.10",
     "saber-plugin-meta-redirect": "^0.1.2",
-    "saber-plugin-netlify-redirect": "^0.0.6",
     "vue-konami-code": "^1.0.0"
   },
   "devDependencies": {
@@ -39,6 +38,8 @@
     "last 2 versions"
   ],
   "scripts": {
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && saber --port 3050",
+    "saber": "set NODE_OPTIONS=--openssl-legacy-provider && saber --port 3050"
   }
 }
