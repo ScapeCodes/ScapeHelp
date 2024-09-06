@@ -2,8 +2,7 @@
   <div class="content">
     <div class="content">
       <p v-if="version"> The latest <b>{{ branch }}</b> version of {{ name }} is <b>{{ version }}</b>
-        <span v-if="build"> (build {{ build }} <span v-if="commit">, commit <a :href='`https://github.com/RockinChaos/${name}/commit/${commit}`' target="_blank" rel="noopener noreferrer">{{ commit.substring(0, 7) }}</a>, <a :href="changelogDevUrl" target="_blank" rel="noopener noreferrer">changelog</a>).</span></span>
-        <span v-if="branch == 'stable'"> (<a :href="changelogReleaseUrl" target="_blank" rel="noopener noreferrer">changelog</a>).</span>
+        (<span v-if="build"><a :href='`https://ci-dev.craftationgaming.com/job/${name}/${build}`' target="_blank" rel="noopener noreferrer">build {{ build }}</a>, <a :href='`https://github.com/${git}/commits/master`' target="_blank" rel="noopener noreferrer">commit history</a></span><span v-if="branch === 'stable'"><a :href='`https://github.com/${git}/releases`' target="_blank" rel="noopener noreferrer">changelog</a></span>).
       </p>
     </div>
     <div class="box">
@@ -21,40 +20,48 @@
             </span>
           </div>
         </div>
-        <div class="column is-narrow is-hidden-tablet">
-          <p class="content">
-            {{ description }}
-          </p>
-        </div>
         <div class="column is-narrow">
           <div class="buttons column-margin-top">
-            <b-button type="is-info" v-if="info" tag="a" :href="info"> More Info </b-button>
+            <b-button type="is-info" style="background-color:#776202" v-if="branch !== 'stable'" tag="a" @click="toggleLastCommits">b{{build}} Changes</b-button>
+            <b-button type="is-info" tag="a" @click="toggleCommits">Changelog</b-button>
             <b-button type="is-button-primary" v-if="downloadUrl" tag="a" :href="downloadUrl"> Download </b-button>
-            <b-button type="is-button-secondary" v-if="premium && branch == 'stable'" tag="a" :href="premiumUrl" target="_blank" rel="noopener noreferrer"> Download </b-button>
+            <b-button type="is-button-secondary" v-if="premium && branch === 'stable'" tag="a" :href="premiumUrl" target="_blank" rel="noopener noreferrer"> Download </b-button>
           </div>
         </div>
       </div>
-      <div class="is-hidden-mobile">
-        <div class="content download-bottom">
-          <div class="message-body">
-            <p>
-              {{ description }}
-            </p>
-            <p> Officially supports <b>CraftBukkit</b>, <b>Spigot</b> and <a href="https://papermc.io/" target="_blank" rel="noopener noreferrer">
-                <b>Paper (recommended)</b>
-              </a> server software. </p>
-            <ul>
-              <li>✅ <b v-if="branch == 'stable'">{{ releaseVersions }}</b> <b v-if="branch == 'dev'">{{ supportedVersions }}</b> - Actively developed against and supports these versions. </li>
-              <li>⚠️ <b>{{ deprecatedVersions }}</b> - These versions are still supported, but are not a priority for us, and may be dropped in a future release. </li>
-            </ul>
-          </div>
-        </div>
+      <hr/>
+      <div class="message-body">
+        <p v-html="description"></p>
+      </div>
+      <div>
+        <hr v-if="build && showLastCommits"/>
+        <Changelog
+            v-if="build"
+            :show="showLastCommits"
+            messageType="warning"
+            :title="`b${build} Changes`"
+            :groupedCommits="groupedLastCommits"
+            :formatCommit="formatCommit"
+            :git="git"
+            :toggle="toggleLastCommits"
+        />
+        <hr v-if="showCommits"/>
+        <Changelog
+            :show="showCommits"
+            messageType="info"
+            :title="branch === 'stable' ? 'Release Changelog' : 'Snapshot Changelog'"
+            :groupedCommits="groupedCommits"
+            :formatCommit="formatCommit"
+            :git="git"
+            :toggle="toggleCommits"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Changelog from './Changelog.vue';
 export default {
     props: {
         name: {
@@ -62,18 +69,6 @@ export default {
             required: true
         },
         description: {
-            type: String,
-            required: true
-        },
-        releaseVersions: {
-            type: String,
-            required: true
-        },
-        supportedVersions: {
-            type: String,
-            required: true
-        },
-        deprecatedVersions: {
             type: String,
             required: true
         },
@@ -85,6 +80,10 @@ export default {
             type: String,
             required: true
         },
+        git: {
+          type: String,
+          required: true
+        },
         downloadUrl: {
             type: String,
             required: false
@@ -93,19 +92,17 @@ export default {
             type: String,
             required: false
         },
-        commit: {
-            type: String,
-            required: false
+        commits: {
+          type: Array,
+          required: false,
+          default: () => []
+        },
+        lastCommits: {
+          type: Array,
+          required: false,
+          default: () => []
         },
         build: {
-            type: String,
-            required: false
-        },
-        changelogDevUrl: {
-            type: String,
-            required: false
-        },
-        changelogReleaseUrl: {
             type: String,
             required: false
         },
@@ -122,19 +119,71 @@ export default {
             required: false
         }
     },
-    methods: {
-        tagClass(tag) {
-            let tagColor = tag.color || "primary";
-            return {
-                tag: true,
-                [`is-${tagColor}`]: true
-            };
+    data() {
+      return {
+        showCommits: false,
+        showLastCommits: false
+      }
+    },
+    components: {
+      Changelog
+    },
+    computed: {
+        groupedCommits() {
+          if (!this.commits || !Array.isArray(this.commits)) {
+            return {};
+          }
+
+          return this.commits.reduce((acc, commit) => {
+            if (!acc[commit.commitType]) {
+              acc[commit.commitType] = [];
+            }
+            acc[commit.commitType].push(commit);
+            return acc;
+          }, {});
+        },
+        groupedLastCommits() {
+          if (!this.lastCommits || !Array.isArray(this.lastCommits)) {
+            return {};
+          }
+
+          return this.lastCommits.reduce((acc, commit) => {
+            if (!acc[commit.commitType]) {
+              acc[commit.commitType] = [];
+            }
+            acc[commit.commitType].push(commit);
+            return acc;
+          }, {});
         }
+      },
+    methods: {
+        toggleCommits() {
+          this.showCommits = !this.showCommits;
+        },
+        toggleLastCommits() {
+          this.showLastCommits = !this.showLastCommits;
+        },
+        formatCommit(string) {
+          return string.replace(/`([^`]+)`/g, '<b>$1</b>');
+        },
+        tagClass(tag) {
+          let tagColor = tag.color || "primary";
+          return {
+            tag: true,
+            [`is-${tagColor}`]: true
+          };
+        }
+    },
+    watch: {
+      branch() {
+        this.showCommits = false;
+        this.showLastCommits = false;
+      }
     }
 }
 </script>
 
-<style scoped>
+<style>
 .no-margin-bottom {
     margin-bottom: 0;
 }
