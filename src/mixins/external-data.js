@@ -151,7 +151,7 @@ function getVersionFromArtifact(name, fileName) {
 function parseCommitMessage(commitId, comment) {
     const lines = comment.split('\u000a');
     const firstLine = lines[0];
-    const typeMatch = firstLine.match(/^(fix|feat|chg|chore|bump|ign):/);
+    const typeMatch = firstLine.match(/^(fix|feat|chg|rmvd|chore|bump|ign):/);
     const commitType = typeMatch ? typeMatch[1] + ':' : 'other:';
     const commitName = typeMatch ? firstLine.split(':')[1].trim() : firstLine.trim();
     const commitDescription = lines.slice(1).join(' ').trim();
