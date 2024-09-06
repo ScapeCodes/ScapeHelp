@@ -222,7 +222,7 @@ async function getJenkins() {
             state.builds.dev.plugins[name].lastCommits = [];
             state.builds.stable.plugins[name].commits = [];
 
-            let response = name.includes("itemjoin") ? await axios.get(`${currentCI}1030/api/json`) : await axios.get(`${currentCI}lastSuccessfulBuild/api/json`);
+            let response = await axios.get(`${currentCI}lastSuccessfulBuild/api/json`);
             state.builds.dev.plugins[name].build = response.data.id;
             state.builds.dev.plugins[name].version = getVersionFromArtifact(state.builds.dev.plugins[name].name, response.data.artifacts[0].displayPath);
             state.builds.dev.plugins[name].downloadUrl = `${currentCI}lastSuccessfulBuild/artifact/${response.data.artifacts[0].relativePath}`;
