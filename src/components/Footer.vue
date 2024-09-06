@@ -5,8 +5,8 @@
                 <div class="field is-grouped is-grouped-multiline has-text-weight-semibold">
                     <b-tooltip class="control" multilined label="Visit the build server">
                         <div class="tags has-addons">
-                            <a href="https://jenkins.craftationgaming.com/" target="_blank" rel="noopener noreferrer" class="tag is-dark">Jenkins</a>
-                            <a href="https://jenkins.craftationgaming.com/" target="_blank" rel="noopener noreferrer" class="tag is-success">{{ projects }} projects</a>
+                            <a href="https://ci-dev.craftationgaming.com/" target="_blank" rel="noopener noreferrer" class="tag is-dark">Jenkins</a>
+                            <a href="https://ci-dev.craftationgaming.com/" target="_blank" rel="noopener noreferrer" class="tag is-success">{{ projects }} projects</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip class="control" multilined :label="downloadsHover + ' downloads across BukkitDev and SpigotMC'">
