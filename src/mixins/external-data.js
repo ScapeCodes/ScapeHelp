@@ -167,11 +167,11 @@ function getVersionFromArtifact(name, fileName) {
 function parseCommitMessage(commitId, comment) {
     const lines = comment.split('\u000a');
     const firstLine = lines[0];
-    const typeMatch = firstLine.match(/^(fix|feat|chg|rmvd|chore|bump|ign):/);
-    const commitType = typeMatch ? typeMatch[1] + ':' : 'other:';
+    const typeMatch = firstLine.match(/^(fix|feat|chg|rmvd|chore|bump|bmp|ignore|ign):/);
+    const commitType = typeMatch ? typeMatch[1].replace("chg", "change").replace("feat", "added").replace("fix", "fixed").replace("rmvd", "removed") + ':' : 'other:';
     const commitName = typeMatch ? firstLine.split(':')[1].trim() : firstLine.trim();
     const commitDescription = lines.slice(1).join(' ').trim();
-    return (commitName.match(/-RELEASE|-SNAPSHOT/) || commitType.match(/^(bump|ign):/))
+    return (commitName.match(/-RELEASE|-SNAPSHOT/) || commitType.match(/^(bump|bmp|ignore|ign):/))
         ? null
         : { commitId, commitType: commitType.charAt(0).toUpperCase() + commitType.slice(1), commitName, commitDescription };
 }
