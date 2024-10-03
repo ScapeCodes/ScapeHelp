@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="content">
-      <p v-if="version"> The latest <b>{{ branch }}</b> version of {{ name }} is <b>{{ version }}</b>
+      <p v-if="version"> The latest <b>{{ branch }}</b> version of {{ name }} was released on <b>{{ new Date(timestamp).toLocaleString() }}</b>
         (<span v-if="build"><a :href='`https://ci-dev.craftationgaming.com/job/${name}/${build}`' target="_blank" rel="noopener noreferrer">build {{ build }}</a>, <a :href='`https://github.com/${git}/commits/master`' target="_blank" rel="noopener noreferrer">commit history</a></span><span v-if="branch === 'stable'"><a :href='`https://github.com/${git}/releases`' target="_blank" rel="noopener noreferrer">changelog</a></span>).
       </p>
     </div>
@@ -105,6 +105,10 @@ export default {
         build: {
             type: String,
             required: false
+        },
+        timestamp: {
+          type: String,
+          required: false
         },
         premium: {
             type: Boolean,

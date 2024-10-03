@@ -12,6 +12,7 @@ const pluginsDefaults = {
         lastCommits: null,
         build: null,
         version: null,
+        timestamp: null,
         tags: [{ text: 'PLUGIN', color: 'info' }, { text: 'MINECRAFT', color: 'light' }]
     },
     fakecreative: {
@@ -25,6 +26,7 @@ const pluginsDefaults = {
         lastCommits: null,
         build: null,
         version: null,
+        timestamp: null,
         premium: true,
         tags: [{ text: 'PLUGIN', color: 'info' }, { text: 'PREMIUM', color: 'danger' }, { text: 'MINECRAFT', color: 'light' }]
     },
@@ -39,6 +41,7 @@ const pluginsDefaults = {
         lastCommits: null,
         build: null,
         version: null,
+        timestamp: null,
         premium: false,
         tags: [{ text: 'PLUGIN', color: 'info' }, { text: 'MINECRAFT', color: 'light' }]
     },
@@ -51,6 +54,7 @@ const pluginsDefaults = {
         lastCommits: null,
         build: null,
         version: null,
+        timestamp: null,
         tags: [{ text: 'LIBRARY', color: 'warning' }, { text: 'MINECRAFT', color: 'light' }]
     }
 };
@@ -240,6 +244,7 @@ async function getJenkins() {
 
             let response = await axios.get(`${currentCI}lastSuccessfulBuild/api/json`);
             state.builds.dev.plugins[name].build = response.data.id;
+            state.builds.dev.plugins[name].timestamp = response.data.timestamp;
             state.builds.dev.plugins[name].version = getVersionFromArtifact(state.builds.dev.plugins[name].name, response.data.artifacts[0].displayPath);
             state.builds.dev.plugins[name].downloadUrl = `${currentCI}lastSuccessfulBuild/artifact/${response.data.artifacts[0].relativePath}`;
             getCommits(currentCI, name, (response.data.id - 1), response);
@@ -261,6 +266,7 @@ async function getLatestRelease() {
         for (const name in pluginsDefaults) {
             const { data } = await axios.get('https://api.github.com/repos/' + state.builds.stable.plugins[name].git + '/releases');
             state.builds.stable.plugins[name].version = data[0].tag_name + "-RELEASE";
+            state.builds.stable.plugins[name].timestamp = data[0].created_at;
             state.builds.stable.error = null;
             data[0].assets.forEach(asset => {
                 state.builds.stable.plugins[name].downloadUrl = asset.browser_download_url;
