@@ -28,6 +28,20 @@ const pluginsDefaults = {
         premium: true,
         tags: [{ text: 'PLUGIN', color: 'info' }, { text: 'PREMIUM', color: 'danger' }, { text: 'MINECRAFT', color: 'light' }]
     },
+    cloudsync: {
+        name: "CloudSync",
+        description: "A spigot-bungee handshake",
+        downloadUrl: null,
+        git: "RockinChaos/CloudSync",
+        premiumUrl: "https://www.spigotmc.org/resources/cloudsync.93382/",
+        spigetUrl: "https://api.spiget.org/v2/resources/93382",
+        commits: null,
+        lastCommits: null,
+        build: null,
+        version: null,
+        premium: false,
+        tags: [{ text: 'PLUGIN', color: 'info' }, { text: 'MINECRAFT', color: 'light' }]
+    },
     chaoscore: {
         name: "ChaosCore",
         description: "A shaded core utility",
@@ -57,6 +71,7 @@ const state = Vue.observable({
             plugins: {
                 itemjoin: { ...pluginsDefaults.itemjoin },
                 fakecreative: { ...pluginsDefaults.fakecreative },
+                cloudsync: { ...pluginsDefaults.cloudsync },
                 chaoscore: { ...pluginsDefaults.chaoscore }
             },
             loading: true,
@@ -66,6 +81,7 @@ const state = Vue.observable({
             plugins: {
                 itemjoin: { ...pluginsDefaults.itemjoin },
                 fakecreative: { ...pluginsDefaults.fakecreative },
+                cloudsync: { ...pluginsDefaults.cloudsync },
                 chaoscore: { ...pluginsDefaults.chaoscore }
             },
             loading: true,

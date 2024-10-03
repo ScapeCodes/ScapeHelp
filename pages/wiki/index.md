@@ -9,4 +9,5 @@ However you can view the current Github wikis by following the links below.
 
 * [ItemJoin Wiki](https://github.com/RockinChaos/ItemJoin/wiki)
 * [FakeCreative Wiki](https://github.com/RockinChaos/FakeCreative/wiki)
+* [CloudSync Wiki](https://github.com/RockinChaos/CloudSync/wiki)
 * [ChaosCore Wiki](https://github.com/RockinChaos/ChaosCore/wiki)

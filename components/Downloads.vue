@@ -46,6 +46,11 @@
                         :branch="branch"
                     />
 
+                    <downloads-item
+                        v-bind="plugins.cloudsync"
+                        :branch="branch"
+                    />
+
                     <hr type="is-danger">
 
                     <h1 class="title is-4">Other</h1>
