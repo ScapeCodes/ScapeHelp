@@ -4,7 +4,7 @@ Originally forked from [EssentialsX/Website](https://github.com/EssentialsX/Webs
 <br/>
 Credit to EssentialsX and their team.
 
-The Craftation Labs website hosted at https://ci.craftationgaming.com.
+The Craftation Labs website hosted at N/A
 
 This website is a static site generated using [Saber](https://github.com/saberland/saber). The site uses the [Bulma](https://bulma.io) and [Buefy](https://buefy.org) frameworks.
 

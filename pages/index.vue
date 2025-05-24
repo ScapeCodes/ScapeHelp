@@ -5,7 +5,7 @@
             <div class="container">
               <b-notification type="is-primary" :closable="false">
                 <p>
-                    Welcome to Craftation Labs, a one-stop location for all resources developed by <a class="has-text-white" href="https://github.com/RockinChaos" target="_blank" rel="noopener noreferrer">@RockinChaos</a>.
+                    Welcome to ScapeHelp, a one-stop location for all resources developed by <a class="has-text-white" href="https://github.com/RockinChaos" target="_blank" rel="noopener noreferrer">@RockinChaos</a>.
                     <br/>
                     If you're looking for development builds "snapshots" click the downloads button to be redirected.
                 </p>

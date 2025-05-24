@@ -5,8 +5,7 @@
                 <b-notification type="is-patreon">
                     <p>
                         If you'd like to support the development of these Resources, please consider supporting us on
-                        <a href="https://www.paypal.me/RockinChaos" target="_blank" rel="noopener noreferrer">PayPal</a> or
-                        <a href="https://www.patreon.com/rockinchaos" target="_blank" rel="noopener noreferrer">Patreon</a>.
+                        <a href="https://www.paypal.me/DeadlyPvP" target="_blank" rel="noopener noreferrer">PayPal</a>
                     </p>
                 </b-notification>
                 <ClientOnly>

@@ -11,8 +11,8 @@ try {
 
 module.exports = {
     siteConfig: {
-        title: "Craftation Labs",
-        description: "Craftation Labs for development builds and official releases",
+        title: "ScapeHelp Projects",
+        description: "Providing frequent updates to all my plugins.",
         link: [
           {
             rel: 'icon',
