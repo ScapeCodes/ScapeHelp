@@ -40,6 +40,8 @@
     "postinstall": "patch-package",
     "start": "set NODE_OPTIONS=--openssl-legacy-provider && saber serve --port 3050",
     "dev": "set NODE_OPTIONS=--openssl-legacy-provider && saber --port 3050",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && saber build"
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && saber build",
+    "predepoly": "npm run build",
+    "depoly": "gh-pages -d dist"
   }
 }
